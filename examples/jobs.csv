@@ -1,0 +1,9 @@
+# Demo workload for: java -jar target/chronoq.jar run examples/jobs.csv --workers 2
+# Several jobs fall due while both workers are busy, so you can watch the higher priority ones go first.
+name,start_after_ms,priority,duration_ms,repeat_every_ms,repeat_count
+nightly-backup,0,5,400,0,0
+cache-warmup,0,8,250,0,0
+send-emails,0,2,150,0,0
+heartbeat,100,1,20,200,5
+sales-report,300,6,300,0,0
+cleanup-temp,300,3,100,0,0
